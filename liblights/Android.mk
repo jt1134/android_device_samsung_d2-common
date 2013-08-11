@@ -28,4 +28,8 @@ LOCAL_MODULE := lights.msm8960
 
 LOCAL_MODULE_TAGS := optional
 
+ifeq ($(VARIANT_MODEL),expressatt)
+  LOCAL_CFLAGS += -DNO_LEDS
+endif
+
 include $(BUILD_SHARED_LIBRARY)
