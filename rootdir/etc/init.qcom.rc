@@ -595,3 +595,15 @@ service macloader /system/bin/macloader
     class main
     oneshot
 
+service orientationd /system/bin/orientationd
+    class main
+    user compass
+    group system input
+    disabled
+
+service geomagneticd /system/bin/geomagneticd
+    class main
+    user compass
+    group system input
+    disabled
+
